@@ -16,6 +16,13 @@ $(document).ready(function() {
       error: function() {
         console.log('ERROR');
       },
-
-    })
+    });
+  // SELECT
+  // var select = $('#genreType');
+    // function selectGenre() {
+    //   var x = document.getElementById("genreType").value;
+    //   alert('CAMBIO GENERE'); //debug
+    function selectGenre() {
+      alert("hi");
+    }
 }); // End Document
