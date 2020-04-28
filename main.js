@@ -1,7 +1,5 @@
 $(document).ready(function() {
 	var cdList = $('.cds-container')
-  var cdArray = [];
-
   // loading API in array
     $.ajax({
       url: 'https://flynn.boolean.careers/exercises/api/array/music',
