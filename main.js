@@ -22,7 +22,4 @@ $(document).ready(function() {
     // function selectGenre() {
     //   var x = document.getElementById("genreType").value;
     //   alert('CAMBIO GENERE'); //debug
-    function selectGenre() {
-      alert("hi");
-    }
 }); // End Document
