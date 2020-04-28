@@ -1,23 +1,23 @@
 $(document).ready(function() {
 	var cdList = $('.cds-container')
   var cdArray = [];
-  // handlebars
-  var source = $('#template').html();
-  var template = Handlebars.compile(source);
-  // loading cds in html
-  for (i = 0; i < 10; i++) {
+
+  // loading API in array
     $.ajax({
       url: 'https://flynn.boolean.careers/exercises/api/array/music',
       method: 'GET',
       success: function(data) {
-        cdArray.push
-
-
+        // handlebars
+        var source = $('#template').html();
+        var template = Handlebars.compile(source);
+          for (i = 0; i < data.response.length; i++) {
+              var htmlCdList = template(data.response[i]);
+              cdList.append(htmlCdList);
+          }
       },
       error: function() {
         console.log('ERROR');
       },
-    })
-  }
 
-});
+    })
+}); // End Document
